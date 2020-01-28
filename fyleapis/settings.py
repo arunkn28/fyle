@@ -25,7 +25,7 @@ SECRET_KEY = 't#g!y_ld=e72%k_va_v-j3_wsby6@bg2v#5i9+f&be_)(trez0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fyle-apis.herokuapp.com']
 
 
 # Application definition
