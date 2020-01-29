@@ -1,10 +1,25 @@
 import json
 from django.core import serializers
 from django.db.models import CharField
-from django.db.models import  Q
+from django.db.models import Q
+from django.http import HttpResponse
+from django.views.generic import View
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import Branches, Banks
+from .models import Branches
+
+
+class HomePage(View):
+    def get(self, request):
+        try:
+            home_page_content = """<h1>Hello there!</h1> </br>Please use 
+            http://fyle-apis.herokuapp.com/api/branches/autocomplete?q=RTGS&limit=3&offset=0</br>
+            and </br>
+            http://fyle-apis.herokuapp.com/api/branches?q=Bangalore&limit=2&offset=1
+            to test the APIs"""
+            return HttpResponse(home_page_content, status=200)
+        except Exception as e:
+            return Response(status=500)
 
 
 class AutoComplete(APIView):

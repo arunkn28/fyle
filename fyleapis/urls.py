@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from fylebankapis.views import AutoComplete, AllPossibleMatch
+from fylebankapis.views import AutoComplete, AllPossibleMatch, HomePage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/branches/autocomplete', AutoComplete.as_view()),
+    path('', HomePage.as_view()),
     path('api/branches', AllPossibleMatch.as_view())
 ]
