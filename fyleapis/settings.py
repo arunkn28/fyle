@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't#g!y_ld=e72%k_va_v-j3_wsby6@bg2v#5i9+f&be_)(trez0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['fyle-apis.herokuapp.com', '*']
 
